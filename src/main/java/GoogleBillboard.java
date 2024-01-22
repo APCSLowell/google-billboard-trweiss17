@@ -1,10 +1,10 @@
 
 
 public class GoogleBillboard {
-	public String digits;
-        public double run;
-        public int g= 0;
-        public int count= 0;
+	public static String digits;
+        public static double run;
+        public static int g= 0;
+        public static int count= 0;
 	public final static String e = "2.7182818284590452353602874713526624977572470936999595749669676277240766303535475945713821785251664274274663919320030599218174135966290435";  
 	public static void main(final String[] args) {
 		setup();
@@ -23,12 +23,12 @@ public static void setup()
 for(int i=0; i< e.length();i++){
   digits = e.substring(i, i+10);
   for(int k= 0; k<10; k++){
-    count+=Integer.parseInt(digits.substring(k);
+    count+=Integer.parseInt(digits.substring(k));
   }
   if(count==49){
     f++;
     if(f==5){
-      return "f(5)="+digits;
+      //return "f(5)="+digits; you cant return a String in a void function
       break;
     }
   }else{
